@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!--nav bar-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+  <div class="ui container">
+    <div class="ui inverted secondary menu stackable">
+      <h2 class="ui teal header item">Blog</h2>
+      <a href="/" class="m-item item m-mobile-hide active"><i class="home icon"></i>Home</a>
+      <a href="/page_types" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
+      <a href="/page_tags" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
+      <a href="/archives" class="m-item item m-mobile-hide"><i class="clone icon"></i>Archive</a>
+      <a href="/about" class="m-item item m-mobile-hide"><i class="info icon"></i>About Me</a>
+      <div class="m-item right item  m-mobile-hide">
+        <form action="/search" method="get">
+          <div class="ui action input inverted transparent ">
+            <input type="text" name="title" placeholder="search...">
+            <button class="ui icon button" type="submit">
+              <i class="search icon"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <a id="b1" href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+    <i class="sidebar icon"></i>
+  </a>
+</nav>
+
+</html>

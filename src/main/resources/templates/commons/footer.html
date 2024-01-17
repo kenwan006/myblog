@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<footer class="ui inverted vertical segment m-opacity-tiny">
+  <div class="ui center aligned container">
+    <div class="ui inverted divided stackable grid">
+      <div class="two wide column ">
+        <h4 class="ui inverted header item m-text-thin m-text-spaced m-opacity-mini" >Group</h4>
+        <div class="ui inverted link list">
+          <div class="item">
+            <img src="/images/QRcode.png" class="ui rounded image item" style="width: 100px">
+          </div>
+        </div>
+
+      </div>
+      <div class="five wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced ">Latest Blogs</h4>
+        <div class="ui inverted link list">
+          <a class="item m-text-lined" th:each="newBlog,iter:${newBlogs}" th:href="@{'/page_blog/'+${newBlog.getId()}}" th:text="${newBlog.getTitle()}">博客1</a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced ">Contact Me</h4>
+        <div class="ui inverted link list">
+          <p class="item m-text-lined" href="#">QQ:123456789</p>
+          <p class="item m-text-lined" href="#">Email:123456789@qq.com</p>
+          <a class="item m-text-lined" href="https://blog.csdn.net/qq_46101869">CSDN</a>
+        </div>
+      </div>
+      <div class="six wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced">Brief Introduction</h4>
+        <p class="m-text-small m-text-thin m-text-spaced m-opacity-mini" >
+          This is a personal blog.
+          The one thing you must believe in is this – if you have a dream, you must pursue it. We should all be dream chasers!
+          Regardless of the current situation, we should strive and take a chance. How will you know if you will succeed if you don't try?
+          May everyone ride on the horse of dreams and not disappoint the youth and the beautiful moments of life!</p>
+      </div>
+    </div>
+    <div class="ui divider "></div>
+    <p class="m-text-thin m-text-spaced m-opacity-tiny m-text-lined">Copyright © 2024 Dreamchaser</p>
+  </div>
+</footer>
+
+</html>
