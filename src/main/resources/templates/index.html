@@ -31,7 +31,7 @@
                     </div>
                     <!--列表-->
                     <div class="ui attached segment ">
-                        <div th:if="${blogs.size()==0}"><h2>没有更多的博客啦！不过未来说不定会有哦！QAQ</h2></div>
+                        <div th:if="${blogs.size()==0}"><h2>No more blogs. To be post in the future! QAQ</h2></div>
                         <div class="ui padded segment vertical m-padded-b-small m-mobile-clear" th:each="blog,iter:${blogs}">
                             <div class="ui grid mobile reversed stackable">
                                 <div class="ui eleven wide column">

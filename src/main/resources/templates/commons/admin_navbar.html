@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!--nav bar for the admin console-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary menu stackable">
+            <h2 class="ui teal header item">Admin Console</h2>
+            <a href="/admin/blogs" class="m-item active item m-mobile-hide"><i class="home icon"></i>Blogs</a>
+            <a href="/admin/types" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
+            <a href="/admin/tags" class="m-item item m-mobile-hide"><i class="tags icon"></i>Tags</a>
+            <a href="/admin/comments" class="m-item item m-mobile-hide"><i class="comment icon"></i>Comments</a>
+            <div class="right menu">
+                <div class="ui dropdown item m-item m-mobile-hide">
+                    <img src="/images/头像.jpg" class="ui avatar image">
+                    &nbsp;&nbsp;Achilles001
+                    <i class="dropdown icon"></i>
+                    <div class="menu ">
+                        <a class="item " href="/user/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="b1" href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+</html>

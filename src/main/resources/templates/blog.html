@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/animate.min.css">
     <link rel="stylesheet" href="/lib/prism/prism.css">
     <link rel="stylesheet" href="/lib/tocbot/tocbot.css">
-    <title>博客详情</title>
+    <title>blog detail</title>
 
 
 </head>
@@ -25,7 +25,7 @@
                 <div class="ui list horizontal link  ">
                     <div class="item">
                         <img src="/images/头像.jpg" class="ui avatar image" style="height: 40px;width: 40px">
-                        <div class="content"><a href="#" class="header">追梦</a></div>
+                        <div class="content"><a href="#" class="header">dream_chasing</a></div>
                     </div>
                     <div class="item">
                         <i class="calendar icon"></i><span th:text="${#dates.format(blog.getDate(),'yyyy-MM-dd')}"></span>
@@ -49,20 +49,20 @@
 
                     <div class="ui  segment basic  column twelve wide">
                         <div>
-                            分类专栏：
+                            Category：
                             <div class="ui  basic teal left pointing label" th:text="${blog.getType().getName()}">一年总结</div>
                         </div>
                         <br>
                         <div >
-                            文章标签：
+                            Tag：
                             <div class="ui  basic teal left pointing label" th:each="tag,iter:${blog.getTags()}" th:text="${tag.getName()}">一年总结</div>
                         </div>
 
                     </div>
                     <div class="ui right aligned segment basic column four wide">
-                        <div class="ui label orange basic" th:if="${blog.getProperty()==1}">原创</div>
-                        <div class="ui label orange basic" th:if="${blog.getProperty()==2}">转载</div>
-                        <div class="ui label orange basic" th:if="${blog.getProperty()==3}">翻译</div>
+                        <div class="ui label orange basic" th:if="${blog.getProperty()==1}">Original</div>
+                        <div class="ui label orange basic" th:if="${blog.getProperty()==2}">Repost</div>
+                        <div class="ui label orange basic" th:if="${blog.getProperty()==3}">Translation</div>
                     </div>
                 </div>
 
@@ -448,18 +448,18 @@ h5,h6{font-size:1em;}
                 </div>
                 <!--赞赏-->
                 <div class="ui center aligned segment basic" th:if="${blog.getIsAppreciation()==1}">
-                    <button id="payButton" class="ui orange   button circular">赞赏</button>
+                    <button id="payButton" class="ui orange   button circular">Appreciate</button>
                 </div>
                 <div id="QR" class="ui payQR flowing popup transition hidden">
                     <div class="ui orange label basic">
                         <div class="images">
                             <div class="ui image">
                                 <img src="/images/wechat.png" alt="" class="ui rounded bordered image" style="width: 120px">
-                                <div>微信</div>
+                                <div>Wechat</div>
                             </div>
                             <div class="ui image">
                                 <img src="/images/支付宝.png" alt="" class="ui rounded bordered image" style="width: 120px">
-                                <div>支付宝</div>
+                                <div>Alipay</div>
                             </div>
                         </div>
                     </div>
@@ -471,9 +471,9 @@ h5,h6{font-size:1em;}
                 <div class="ui grid middle aligned">
                     <div class="eleven wide column">
                         <ui class="list">
-                            <li>作者：金昊霖</li>
-                            <li>发表时间：2020-7-04</li>
-                            <li th:if="${blog.getIsReprint()}">版权声明：自由转载-非商用-非衍生-保留署名（创意共享3.0许可证）</li>
+                            <li>Author：Achilles</li>
+                            <li>Post time：2023-7-04</li>
+<!--                            <li th:if="${blog.getIsReprint()}">版权声明：自由转载-非商用-非衍生-保留署名（创意共享3.0许可证）</li>-->
                         </ui>
                     </div>
                     <div class="five wide column">
@@ -486,14 +486,14 @@ h5,h6{font-size:1em;}
             <div th:fragment="refresh_area" th:if="${blog.getIsComment()}">
                 <div class="ui bottom attached segment" id="comment-container">
                     <div class="ui comments">
-                        <h3 class="ui dividing header">评论</h3>
+                        <h3 class="ui dividing header">Comment</h3>
                         <div class="comment" th:each="parent,iter:${parents}">
                             <a class="ui avatar image ">
                                 <img class="ui avatar image" th:src="${parent.getIsAdmin()==1}?'/images/头像.jpg':'/images/普通头像.jpg'">
                             </a>
                             <div class="content">
                                 <a class="author" th:text="${parent.getName()}">Matt</a>
-                                <div class="ui  basic teal mini label " th:if="${parent.getIsAdmin()==1}">博主</div>
+                                <div class="ui  basic teal mini label " th:if="${parent.getIsAdmin()==1}">Blogger</div>
                                 <div class="metadata">
                                     <span class="date" th:text="${#dates.format(parent.getTime(),'yyyy-MM-dd HH:ss')}">Today at 5:42PM</span>
                                 </div>
@@ -501,7 +501,7 @@ h5,h6{font-size:1em;}
                                     How artistic!
                                 </div>
                                 <div class="actions">
-                                    <a class="reply" th:data-name="${parent.getName()}" th:data-parent="${parent.getId()}" onclick="changeParent(this)">回复</a>
+                                    <a class="reply" th:data-name="${parent.getName()}" th:data-parent="${parent.getId()}" onclick="changeParent(this)">Reply</a>
                                 </div>
                             </div>
                             <div class="comments" >
@@ -511,7 +511,7 @@ h5,h6{font-size:1em;}
                                     </a>
                                     <div class="content" >
                                         <a class="author" th:text="${son.getName()}">Jenny Hess</a>
-                                        <div class="ui  basic teal mini  label " th:if="${son.getIsAdmin()==1}">博主</div>
+                                        <div class="ui  basic teal mini  label " th:if="${son.getIsAdmin()==1}">Blogger</div>
                                         <div class="metadata">
                                             <span class="date" th:text="${#dates.format(son.getTime(),'yyyy-MM-dd HH:ss')}">Just now</span>
                                         </div>
@@ -529,24 +529,24 @@ h5,h6{font-size:1em;}
                     <input type="hidden" name="blog" th:value="${blog.getId()}">
                     <input id="parent" type="hidden" name="parent" value="-1">
                     <div class="field">
-                        <textarea id="id_content" name="content" placeholder="请输入评论信息...(如果误点击了回复，请刷新页面再评论)"></textarea>
+                        <textarea id="id_content" name="content" placeholder="Please enter you comment.."></textarea>
                     </div>
                     <div class="fields">
                         <div class="field m-mobile-wide">
                             <div class="ui left icon input m-margin-bottom-small ">
                                 <i class="user icon"></i>
-                                <input type="text" name="name" placeholder="姓名">
+                                <input type="text" name="name" placeholder="Name">
                             </div>
                         </div>
 
                         <div class="field m-mobile-wide">
                             <div class="ui left icon input  m-margin-bottom-small ">
                                 <i class="mail icon"></i>
-                                <input type="text" name="email" placeholder="邮箱">
+                                <input type="text" name="email" placeholder="Email">
                             </div>
                         </div>
                         <div class="field  m-margin-bottom-small m-mobile-wide ">
-                            <button class="ui button teal m-mobile-wide" type="submit"><i class="ui edit icon"></i>评论</button>
+                            <button class="ui button teal m-mobile-wide" type="submit"><i class="ui edit icon"></i>Comment</button>
                         </div>
                     </div>
                     <div class="ui error message"></div>
@@ -560,8 +560,8 @@ h5,h6{font-size:1em;}
     <div class="ui vertical icon buttons  m-fixed m-padded m-right-bottom">
 
         <div id="toTop-button" class="ui icon button "><i class="ui chevron up icon"></i></div>
-        <button id="menuButton" type="button" class="ui button teal">目录</button>
-        <a href="#comment-container" class="ui button teal">留言</a>
+        <button id="menuButton" type="button" class="ui button teal">Menu</button>
+        <a href="#comment-container" class="ui button teal">Comment</a>
 
     </div>
     <div id="catalogue" class="ui flowing  popup transition hidden " data-position="left" style="width: 250px !important; ">

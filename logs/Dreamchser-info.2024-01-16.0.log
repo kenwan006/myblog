@@ -1067,3 +1067,6 @@
 2024-01-16 22:42:10.003  INFO 91867 --- [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping : Adding welcome page template: index
 2024-01-16 22:42:10.157  INFO 91867 --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 9090 (http) with context path ''
 2024-01-16 22:42:10.167  INFO 91867 --- [main] com.dreamchaser.Application : Started Application in 2.47 seconds (JVM running for 3.036)
+2024-01-16 22:46:00.385  INFO 91867 --- [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-01-16 22:46:00.389  INFO 91867 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource : {dataSource-1} closing ...
+2024-01-16 22:46:00.390  INFO 91867 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource : {dataSource-1} closed
