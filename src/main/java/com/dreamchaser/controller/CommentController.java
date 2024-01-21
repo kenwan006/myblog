@@ -39,9 +39,9 @@ public class CommentController {
         ModelAndView mv=new ModelAndView();
         mv.setViewName("admin/tip");
         if (commentService.deleteCommentById(id)==1){
-            mv.addObject("message","评论删除成功！");
+            mv.addObject("message","Delete Comment Successfully！");
         }else{
-            mv.addObject("message","评论删除失败！");
+            mv.addObject("message","Failed to delete comment！");
         }
         return mv;
     }

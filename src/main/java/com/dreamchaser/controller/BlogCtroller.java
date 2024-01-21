@@ -22,9 +22,9 @@ public class BlogCtroller {
         blog.setTags(","+blog.getTags()+",");
         mv.setViewName("admin/tip");
         if (blogService.addBlog(blog)==1){
-            mv.addObject("message","博客保存成功!");
+            mv.addObject("message","Blog saved successfully!");
         }else {
-            mv.addObject("message","博客保存失败!");
+            mv.addObject("message","Failed to save blog!");
         }
         return mv;
     }
@@ -33,9 +33,9 @@ public class BlogCtroller {
         ModelAndView mv=new ModelAndView();
         mv.setViewName("admin/tip");
         if (blogService.deleteBlog(id)==1){
-            mv.addObject("message","博客删除成功!");
+            mv.addObject("message","Blog deleted successfully!");
         }else {
-            mv.addObject("message","博客删除失败!");
+            mv.addObject("message","Failed to delete blog!");
         }
         return mv;
     }
@@ -45,9 +45,9 @@ public class BlogCtroller {
         ModelAndView mv=new ModelAndView();
         mv.setViewName("admin/tip");
         if (blogService.updateBlog(blog)==1){
-            mv.addObject("message","博客更新成功!");
+            mv.addObject("message","Blog updated successfully!");
         }else {
-            mv.addObject("message","博客更新失败!");
+            mv.addObject("message","Failed to update blog!");
         }
         return mv;
     }

@@ -25,9 +25,9 @@ public class TagController {
         ModelAndView mv=new ModelAndView();
         mv.setViewName("admin/tip");
         if (tagService.insertTag(tag)==1){
-            mv.addObject("message","添加新标签成功！");
+            mv.addObject("message","Saved Tag successfully！");
         }else {
-            mv.addObject("message","添加新标签失败！");
+            mv.addObject("message","Failed to Save Tag！");
         }
         return mv;
     }
@@ -37,9 +37,9 @@ public class TagController {
         ModelAndView mv=new ModelAndView();
         mv.setViewName("admin/tip");
         if (tagService.deleteTag(id)==1){
-            mv.addObject("message","删除标签成功！");
+            mv.addObject("message","Delete Tag Successfully！");
         }else {
-            mv.addObject("message","删除标签失败！");
+            mv.addObject("message","Failed to Delete Tag！");
         }
         return mv;
     }
@@ -48,9 +48,9 @@ public class TagController {
         ModelAndView mv=new ModelAndView();
         mv.setViewName("admin/tip");
         if (tagService.updateTag(tag)==1){
-            mv.addObject("message","更新新标签成功！");
+            mv.addObject("message","Update Tag Successfully！");
         }else {
-            mv.addObject("message","更新新标签失败！");
+            mv.addObject("message","Failed to Update Tag！");
         }
         return mv;
     }

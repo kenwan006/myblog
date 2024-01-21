@@ -30,9 +30,9 @@ public class TypeController {
         ModelAndView mv=new ModelAndView();
         mv.setViewName("admin/tip");
         if (typeService.addType(type)==1){
-            mv.addObject("message","分类专栏保存成功!");
+            mv.addObject("message","Saved Category successfully!");
         }else {
-            mv.addObject("message","分类专栏保存失败!");
+            mv.addObject("message","Failed to Save Category!");
         }
         return mv;
     }
@@ -42,9 +42,9 @@ public class TypeController {
         ModelAndView mv=new ModelAndView();
         mv.setViewName("admin/tip");
         if (typeService.deleteTypeById(id)==1){
-            mv.addObject("message","分类专栏删除成功!");
+            mv.addObject("message","Delete Category successfully!");
         }else {
-            mv.addObject("message","分类专栏删除失败!");
+            mv.addObject("message","Failed to Delete Category!");
         }
         return mv;
     }
@@ -53,9 +53,9 @@ public class TypeController {
         ModelAndView mv=new ModelAndView();
         mv.setViewName("admin/tip");
         if (typeService.updateType(type)==1){
-            mv.addObject("message","分类专栏更新成功!");
+            mv.addObject("message","Updated Category successfully!");
         }else {
-            mv.addObject("message","分类专栏更新失败!");
+            mv.addObject("message","Failed to Update Category!!");
         }
         return mv;
     }

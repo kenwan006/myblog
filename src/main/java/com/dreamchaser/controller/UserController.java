@@ -29,7 +29,7 @@ public class UserController {
             session.setAttribute("user",user);
             modelAndView.setViewName("redirect:/admin/blogs");
         }else {
-            modelAndView.addObject("tip","用户名或密码错误请重新输入!");
+            modelAndView.addObject("tip","Wrong username or password!");
             modelAndView.setViewName("admin/login");
         }
         return modelAndView;
@@ -40,7 +40,7 @@ public class UserController {
         ModelAndView modelAndView=new ModelAndView();
         session.removeAttribute("user");
         session.invalidate();
-        modelAndView.addObject("message","用户退出成功!");
+        modelAndView.addObject("message","Logged out successfully!");
         modelAndView.setViewName("admin/tip");
         return modelAndView;
     }
